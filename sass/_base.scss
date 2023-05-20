@@ -1,0 +1,58 @@
+
+// variables for the entire site
+:root {
+
+    // colors for the website   
+  --PRIMARY-COLOR: #eb2f64;
+  --PRIMARY-COLOR-LIGHT: #ff3366;
+  --PRIMARY-COLOR-DARK: #ba265d;
+  
+  --GREY-COLOR-LIGHT-1: #faf9f9;
+  --GREY-COLOR-LIGHT-2: #f4f2f2;
+  --GREY-COLOR-LIGHT-3: #f0eeee;
+  --GREY-COLOR-LIGHT-4: #ccc;
+
+  --GREY-COLOR-DARK-1: #333;
+  --GREY-COLOR-DARK-2: #777;
+  --GREY-COLOR-DARK-3: #999;
+
+  --WHITE-COLOR: #fff;
+
+  // shadows
+  --SHADOW-DARK: 0 2rem 6rem rgba(0,0,0, .3);
+  --SHADOW-LIGHT: 0 2rem 5rem rgba(0,0,0, .06);
+
+  // border
+  --BORDER:1px solid var(--GREY-COLOR-LIGHT-2);
+}
+
+// basic configurations
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px (calculates by me for my ease) [10px / 16px]
+}
+
+body {
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--GREY-COLOR-DARK-2);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--PRIMARY-COLOR-LIGHT),
+    var(--PRIMARY-COLOR-DARK)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  // testing purpose
+  min-height: 100vh;
+}

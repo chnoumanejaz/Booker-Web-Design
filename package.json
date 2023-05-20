@@ -1,0 +1,23 @@
+{
+  "name": "booker",
+  "version": "1.0.0",
+  "description": "The one app that handel all your booking problems",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+   
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "M. Nouman Ejaz",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "node-sass": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
+  }
+}

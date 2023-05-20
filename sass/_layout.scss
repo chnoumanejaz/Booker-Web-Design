@@ -1,0 +1,65 @@
+.container{
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--GREY-COLOR-LIGHT-1);
+    box-shadow: var(--SHADOW-DARK);
+
+    // testing purpose
+    min-height: 50rem;
+}
+
+.header{
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: var(--WHITE-COLOR);
+    border-bottom: var(--BORDER);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+
+}
+
+// navigation on the left side
+.sidebar{
+    background-color: var(--GREY-COLOR-DARK-1);
+
+    flex: 0 0 18%; // grow, shrink, width
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+// main area of the page
+.hotel-view{
+    background-color: var(--WHITE-COLOR);
+    flex: 1;
+   
+}
+
+
+// the details and user reviews section design
+.detail{
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--GREY-COLOR-LIGHT-1);
+    border-bottom: var(--BORDER);
+}
+.description{
+    flex: 0 0 60%;
+    box-shadow: var(--SHADOW-LIGHT);
+    padding: 3rem;
+    margin-right: 4.5rem;
+}
+.user-review{
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
