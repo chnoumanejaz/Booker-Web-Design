@@ -26,6 +26,18 @@
   --BORDER:1px solid var(--GREY-COLOR-LIGHT-2);
 }
 
+
+// sass variables for the media queries to make it responsive
+
+$point-largest: 112.5em; // = 1800px
+$point-large: 75em; // = 1200px
+$point-large-low: 68.75em; // = 1100px
+$point-medium: 56.25em; // = 900px
+$point-small: 40.5em; // = 649px
+$point-smallest: 31.25em; // = 500px
+
+
+
 // basic configurations
 *,
 *::after,
@@ -38,6 +50,14 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px (calculates by me for my ease) [10px / 16px]
+
+  @media only screen and (max-width: $point-large-low)
+  {
+    font-size: 55%;
+  }
+  @media only screen and (min-width: $point-largest) {
+    font-size: 80%;
+  }
 }
 
 body {
@@ -55,4 +75,9 @@ body {
 
   // testing purpose
   min-height: 100vh;
+}
+
+
+.no-wrap{
+  white-space: nowrap;
 }

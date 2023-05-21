@@ -20,7 +20,32 @@
           <input
             type="text"
             class="search__input"
-            placeholder="Search Hotels" />
+            placeholder="Search Hotels"
+            id="#search" />
+          <label for="search" class="search__label">
+            <ul class="search__label-list">
+              <li class="search__label-item">
+                <a href="#" class="search__label-link search__label-popular">
+                  Most popular Hotels:
+                </a>
+              </li>
+              <li class="search__label-item">
+                <a href="#" class="search__label-link">HOTEL EAST 21</a>
+              </li>
+              <li class="search__label-item">
+                <a href="#" class="search__label-link">MIMARU SUITES</a>
+              </li>
+              <li class="search__label-item">
+                <a href="#" class="search__label-link">THE Royal Park</a>
+              </li>
+              <li class="search__label-item">
+                <a href="#" class="search__label-link">THE Grand Palace</a>
+              </li>
+              <li class="search__label-item">
+                <a href="#" class="search__label-link">Rooftop Mint</a>
+              </li>
+            </ul>
+          </label>
           <button class="search__btn">
             <svg class="search__icon">
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -42,11 +67,18 @@
           </div>
 
           <div class="user-nav__user">
-            <img
-              src="img/user.png"
-              alt="Nouman Ejaz"
-              class="user-nav__user-pic" />
-            <span class="user-nav__user-name">Nouman</span>
+            <div class="user-nav__menu">
+              <img
+                src="img/user.png"
+                alt="Nouman Ejaz"
+                class="user-nav__user-pic" />
+              <span class="user-nav__user-name">Nouman</span>
+            </div>
+            <div class="user-nav__options">
+              <span class="user-nav__options-name">Account</span>
+              <span class="user-nav__options-name">Settings</span>
+              <span class="user-nav__options-name no-wrap">Log out</span>
+            </div>
           </div>
         </nav>
       </header>
@@ -76,7 +108,7 @@
                 <svg class="side-nav__icon">
                   <use xlink:href="img/sprite.svg#icon-key"></use>
                 </svg>
-                <span>Car Rental</span>
+                <span class="no-wrap">Car Rental</span>
               </a>
             </li>
 
@@ -146,7 +178,7 @@
             </div>
             <div class="overview__rating">
               <div class="overview__rating-average">7.5</div>
-              <div class="overview__rating-vote">325 votes</div>
+              <div class="overview__rating-vote no-wrap">325 votes</div>
             </div>
           </div>
 
@@ -177,7 +209,7 @@
                 </p>
                 <div class="recommendation__friends">
                   <img
-                    src="img/user.png"
+                    src="img/user-6.jpg"
                     alt="Public Recommendation"
                     class="recommendation__pic" />
                   <img
@@ -189,13 +221,13 @@
                     alt="Public Recommendation"
                     class="recommendation__pic" />
                   <img
-                    src="img/user-6.jpg"
+                    src="img/user.png"
                     alt="Public Recommendation"
                     class="recommendation__pic" />
                 </div>
               </div>
             </div>
-            
+
             <!-- The section which contains the reviews of the users or customers -->
             <div class="user-review">
               <figure class="review">
@@ -209,15 +241,13 @@
                     alt="The review by user"
                     class="review__photo" />
                   <div class="review__user-box">
-                    <p class="review__user-name">John Doe</p>
-                    <p class="review__user-date">March 23rd, 2023</p>
+                    <p class="review__user-name no-wrap">John Doe</p>
+                    <p class="review__user-date no-wrap">March 23rd, 2023</p>
                   </div>
-                  <div class="review__rating">
-                    6.9
-                  </div>
+                  <div class="review__rating">6.9</div>
                 </figcaption>
               </figure>
-              
+
               <figure class="review">
                 <blockquote class="review__text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -229,18 +259,23 @@
                     alt="The review by user"
                     class="review__photo" />
                   <div class="review__user-box">
-                    <p class="review__user-name">Jenny smith</p>
-                    <p class="review__user-date">Oct 03rd, 2022</p>
+                    <p class="review__user-name no-wrap">Jenny smith</p>
+                    <p class="review__user-date no-wrap">Oct 03rd, 2022</p>
                   </div>
-                  <div class="review__rating">
-                    8.2
-                  </div>
+                  <div class="review__rating">8.2</div>
                 </figcaption>
               </figure>
-              <button class="btn-inline">
-                Show All <span>&rarr;</span>
-              </button>
+              <button class="btn-inline">Show All <span>&rarr;</span></button>
             </div>
+          </div>
+          <div class="call-to-action">
+            <h2 class="call-to-action__book-now">
+              Good news! we have 5 free rooms for you. Select your dates.
+            </h2>
+            <button class="btn">
+              <span class="btn__visible"> Book Now </span>
+              <span class="btn__invisible"> only 5 rooms left </span>
+            </button>
           </div>
         </main>
       </div>

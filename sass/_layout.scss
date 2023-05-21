@@ -1,65 +1,84 @@
-.container{
-    max-width: 120rem;
-    margin: 8rem auto;
-    background-color: var(--GREY-COLOR-LIGHT-1);
-    box-shadow: var(--SHADOW-DARK);
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--GREY-COLOR-LIGHT-1);
+  box-shadow: var(--SHADOW-DARK);
 
-    // testing purpose
-    min-height: 50rem;
+  @media only screen and(max-width: $point-large) {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
-.header{
-    font-size: 1.4rem;
-    height: 7rem;
-    background-color: var(--WHITE-COLOR);
-    border-bottom: var(--BORDER);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: var(--WHITE-COLOR);
+  border-bottom: var(--BORDER);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: $point-smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
-.content{
-    display: flex;
-
+.content {
+  display: flex;
+  @media only screen and(max-width: $point-medium) {
+    flex-direction: column;
+  }
 }
 
 // navigation on the left side
-.sidebar{
-    background-color: var(--GREY-COLOR-DARK-1);
+.sidebar {
+  background-color: var(--GREY-COLOR-DARK-1);
 
-    flex: 0 0 18%; // grow, shrink, width
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex: 0 0 18%; // grow, shrink, width
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 
 // main area of the page
-.hotel-view{
-    background-color: var(--WHITE-COLOR);
-    flex: 1;
-   
+.hotel-view {
+  background-color: var(--WHITE-COLOR);
+  flex: 1;
 }
-
 
 // the details and user reviews section design
-.detail{
-    font-size: 1.4rem;
-    display: flex;
-    padding: 4.5rem;
-    background-color: var(--GREY-COLOR-LIGHT-1);
-    border-bottom: var(--BORDER);
-}
-.description{
-    flex: 0 0 60%;
-    box-shadow: var(--SHADOW-LIGHT);
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--GREY-COLOR-LIGHT-1);
+  border-bottom: var(--BORDER);
+  @media only screen and(max-width: $point-medium) {
     padding: 3rem;
-    margin-right: 4.5rem;
-}
-.user-review{
-
-    flex: 1;
-    display: flex;
+  }
+  @media only screen and(max-width: $point-small) {
     flex-direction: column;
-    align-items: center;
+  }
+}
+.description {
+  flex: 0 0 60%;
+  box-shadow: var(--SHADOW-LIGHT);
+  padding: 3rem;
+  margin-right: 4.5rem;
+  @media only screen and(max-width: $point-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+  @media only screen and(max-width: $point-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+.user-review {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
